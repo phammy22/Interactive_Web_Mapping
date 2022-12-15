@@ -55,7 +55,7 @@
             top: 0;
             height: 150px;
             margin-top: 20px;
-            width: 300px;
+            width: 250px;
         }
 
         #legend {
@@ -64,7 +64,7 @@
             line-height: 18px;
             height: 210px;
             margin-bottom: 40px;
-            width: 155px;
+            width: 145px;
         }
 
         .legend-key {
@@ -166,7 +166,7 @@
                 ];
 
                 const legend = document.getElementById('legend');
-                legend.innerHTML = "<b>Vaccination Density<br>(vaccinated/10k)</b><br><br>";
+                legend.innerHTML = "<br><b>Total Vaccinated<br><br>";
 
                 layers.forEach((layer, i) => {
                     const color = colors[i];
@@ -187,7 +187,7 @@
                         layers: ['stateData-layer']
                     });
                     document.getElementById('text-description').innerHTML = state.length ?
-                        `<h3>${state[0].properties.name}</h3><p><strong><em>${state[0].properties.fullyVaxPer10k}</strong> fully vaccinated (per 10k people)</em></p>` :
+                        `<h3>${state[0].properties.name}</h3><p><strong><em>${state[0].properties.fullyVaxPer10k}</strong> fully vaccinated</em></p>` :
                         `<p>Hover over a county!</p>`;
                 });
             });
